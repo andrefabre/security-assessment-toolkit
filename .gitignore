@@ -1,0 +1,95 @@
+# Security Assessment Toolkit - Git Ignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Assessment results and reports
+results_*/
+*_report_*.txt
+*_results_*.json
+*_assessment_*.txt
+*.pcap
+*.sarif
+
+# Tool outputs
+burp_report_*.html
+wireshark_analysis_*.txt
+network_scan_report_*.txt
+system_hardening_report_*.txt
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Vagrant
+.vagrant/
+*.log
+
+# Security sensitive files
+*.key
+*.pem
+*.crt
+api_keys.txt
+credentials.txt
+secrets.json
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Log files
+*.log
+logs/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup files
+*.bak
+*.backup
+*~
