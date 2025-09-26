@@ -1,0 +1,240 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Security Assessment Toolkit Vagrant Environment
+# This creates a controlled environment for security testing and assessments
+
+Vagrant.configure("2") do |config|
+  
+  # Base box configuration
+  config.vm.box = "ubuntu/jammy64"
+  config.vm.box_check_update = false
+  
+  # Network configuration
+  config.vm.network "private_network", ip: "192.168.56.10"
+  config.vm.network "forwarded_port", guest: 22, host: 2222, id: "ssh"
+  config.vm.network "forwarded_port", guest: 80, host: 8080, id: "http"
+  config.vm.network "forwarded_port", guest: 443, host: 8443, id: "https"
+  
+  # VM resource configuration
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "security-assessment-toolkit"
+    vb.memory = "4096"
+    vb.cpus = 2
+    vb.gui = false
+    
+    # Enable nested virtualization if needed
+    vb.customize ["modifyvm", :id, "--nested-hw-virt", "on"]
+    
+    # Network adapter configuration
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+  end
+  
+  # Shared folder configuration
+  config.vm.synced_folder "../../", "/home/vagrant/security-toolkit", 
+    owner: "vagrant", group: "vagrant"
+  
+  # Disable default synced folder
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+  
+  # SSH configuration
+  config.ssh.forward_agent = true
+  config.ssh.forward_x11 = true
+  
+  # Provisioning script
+  config.vm.provision "shell", inline: <<-SHELL
+    # Update system
+    apt-get update
+    apt-get upgrade -y
+    
+    # Install essential tools
+    apt-get install -y \
+      curl \
+      wget \
+      git \
+      vim \
+      htop \
+      tmux \
+      unzip \
+      build-essential \
+      python3 \
+      python3-pip \
+      python3-venv \
+      nodejs \
+      npm
+    
+    # Install security tools
+    apt-get install -y \
+      nmap \
+      netcat \
+      tcpdump \
+      wireshark-common \
+      tshark \
+      nikto \
+      dirb \
+      gobuster \
+      sqlmap \
+      hydra \
+      john \
+      hashcat \
+      metasploit-framework \
+      aircrack-ng \
+      recon-ng \
+      maltego \
+      zaproxy
+    
+    # Install Docker
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sh get-docker.sh
+    usermod -aG docker vagrant
+    
+    # Install Docker Compose
+    curl -L "https://github.com/docker/compose/releases/download/v2.20.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    chmod +x /usr/local/bin/docker-compose
+    
+    # Install Python security libraries
+    pip3 install \
+      requests \
+      beautifulsoup4 \
+      scrapy \
+      selenium \
+      pwntools \
+      scapy \
+      paramiko \
+      cryptography \
+      dnspython \
+      python-nmap \
+      shodan \
+      censys
+    
+    # Configure Wireshark for non-root user
+    echo "wireshark-common wireshark-common/install-setuid boolean true" | debconf-set-selections
+    dpkg-reconfigure -f noninteractive wireshark-common
+    usermod -a -G wireshark vagrant
+    
+    # Create workspace directories
+    mkdir -p /home/vagrant/workspace/{scans,reports,tools,payloads}
+    chown -R vagrant:vagrant /home/vagrant/workspace
+    
+    # Install Burp Suite Community (headless setup)
+    cd /tmp
+    wget -O burpsuite_community.sh "https://portswigger.net/burp/releases/download?product=community&type=Linux"
+    chmod +x burpsuite_community.sh
+    echo -e "\n\n\n\n\n\n\n\n\n\n" | ./burpsuite_community.sh -q -dir /opt/BurpSuiteCommunity
+    
+    # Create desktop shortcuts and scripts
+    mkdir -p /home/vagrant/Desktop
+    
+    # Burp Suite launcher script
+    cat > /home/vagrant/Desktop/burpsuite.sh << 'EOF'
+#!/bin/bash
+export DISPLAY=:0
+/opt/BurpSuiteCommunity/BurpSuiteCommunity &
+EOF
+    chmod +x /home/vagrant/Desktop/burpsuite.sh
+    
+    # Wireshark launcher script
+    cat > /home/vagrant/Desktop/wireshark.sh << 'EOF'
+#!/bin/bash
+export DISPLAY=:0
+wireshark &
+EOF
+    chmod +x /home/vagrant/Desktop/wireshark.sh
+    
+    # OWASP ZAP launcher script
+    cat > /home/vagrant/Desktop/zap.sh << 'EOF'
+#!/bin/bash
+export DISPLAY=:0
+zaproxy &
+EOF
+    chmod +x /home/vagrant/Desktop/zap.sh
+    
+    # Set up security toolkit Python environment
+    cd /home/vagrant/security-toolkit
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt 2>/dev/null || echo "No requirements.txt found"
+    
+    # Create useful aliases
+    cat >> /home/vagrant/.bashrc << 'EOF'
+# Security Toolkit Aliases
+alias toolkit='cd /home/vagrant/security-toolkit'
+alias workspace='cd /home/vagrant/workspace'
+alias burp='/home/vagrant/Desktop/burpsuite.sh'
+alias wireshark='/home/vagrant/Desktop/wireshark.sh'
+alias zap='/home/vagrant/Desktop/zap.sh'
+alias activate='source /home/vagrant/security-toolkit/venv/bin/activate'
+alias nmap-quick='nmap -sS -T4 -F'
+alias nmap-full='nmap -sS -sV -O -T4 -p-'
+alias nmap-vuln='nmap -sV --script vuln'
+
+# Useful functions
+function assess-individual() {
+    cd /home/vagrant/security-toolkit
+    source venv/bin/activate
+    python3 tiers/individual/assessment.py
+}
+
+function assess-business() {
+    cd /home/vagrant/security-toolkit
+    source venv/bin/activate
+    python3 tiers/small-business/assessment.py
+}
+
+function assess-app() {
+    cd /home/vagrant/security-toolkit
+    source venv/bin/activate
+    python3 tiers/application/assessment.py
+}
+
+function network-scan() {
+    cd /home/vagrant/security-toolkit
+    source venv/bin/activate
+    python3 scripts/automated-checks/network_scan.py $1
+}
+
+function system-check() {
+    cd /home/vagrant/security-toolkit
+    source venv/bin/activate
+    python3 scripts/automated-checks/system_hardening_check.py
+}
+EOF
+    
+    # Fix ownership
+    chown -R vagrant:vagrant /home/vagrant
+    
+    echo "=============================================="
+    echo "Security Assessment Toolkit VM Setup Complete"
+    echo "=============================================="
+    echo "Access the VM with: vagrant ssh"
+    echo "Use 'toolkit' to navigate to the toolkit directory"
+    echo "Use 'workspace' to navigate to your workspace"
+    echo "Available tools: burp, wireshark, zap, nmap"
+    echo "Assessment shortcuts: assess-individual, assess-business, assess-app"
+    echo "Security checks: network-scan <target>, system-check"
+    echo "=============================================="
+  SHELL
+  
+  # Post-provisioning message
+  config.vm.post_up_message = <<-MSG
+    Security Assessment Toolkit VM is ready!
+    
+    Connect with: vagrant ssh
+    VM IP: 192.168.56.10
+    
+    Pre-installed tools:
+    - Burp Suite Community
+    - Wireshark/Tshark
+    - OWASP ZAP
+    - Nmap, Nikto, Dirb, SQLMap
+    - Metasploit Framework
+    - Various Python security libraries
+    
+    Quick start:
+    vagrant ssh
+    toolkit            # Go to toolkit directory
+    assess-individual  # Run individual assessment
+    network-scan <ip>  # Scan network target
+  MSG
+end

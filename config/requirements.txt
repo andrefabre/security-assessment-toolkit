@@ -1,0 +1,45 @@
+# Security Assessment Toolkit - Python Dependencies
+
+# Core requirements
+requests>=2.28.0
+urllib3>=1.26.12
+
+# Network analysis and scanning
+scapy>=2.4.5
+python-nmap>=0.7.1
+dnspython>=2.2.1
+
+# Web security testing
+beautifulsoup4>=4.11.1
+selenium>=4.5.0
+lxml>=4.9.1
+
+# Cryptography and security
+cryptography>=38.0.0
+paramiko>=2.11.0
+pyopenssl>=22.1.0
+
+# Data processing and analysis
+pandas>=1.5.0
+numpy>=1.23.0
+matplotlib>=3.6.0
+
+# Report generation
+jinja2>=3.1.0
+markdown>=3.4.0
+reportlab>=3.6.0
+
+# Configuration and CLI
+pyyaml>=6.0
+click>=8.1.0
+colorama>=0.4.5
+
+# Network security tools
+shodan>=1.28.0
+censys>=2.1.0
+
+# Optional dependencies for advanced features
+# Uncomment if needed:
+# pwntools>=4.8.0
+# impacket>=0.10.0
+# pymetasploit3>=1.0.3
