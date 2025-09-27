@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Assessment - Francis</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .report-header {
+            text-align: center;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .report-header h1 {
+            color: #007bff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .report-header h2 {
+            color: #555;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        
+        .assessment-date, .member-info {
+            color: #666;
+            font-style: italic;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        section h2 {
+            color: #007bff;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .risk-card {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        .risk-high {
+            border-left-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        
+        .risk-medium {
+            border-left-color: #ffc107;
+            background-color: #fff3cd;
+        }
+        
+        .risk-low {
+            border-left-color: #28a745;
+            background-color: #d4edda;
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .recommendations-list {
+            list-style: none;
+        }
+        
+        .recommendations-list li {
+            background: #e7f3ff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+        
+        .priority-high {
+            border-left-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .platform-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            background: white;
+        }
+        
+        .platform-name {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        
+        .risk-indicator {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .risk-indicator.high { background-color: #dc3545; }
+        .risk-indicator.medium { background-color: #ffc107; color: #000; }
+        .risk-indicator.low { background-color: #28a745; }
+        
+        .report-footer {
+            border-top: 2px solid #e9ecef;
+            padding-top: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #e9ecef;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            color: #495057;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: #007bff;
+            transition: width 0.3s ease;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="report-header">
+            <h1>Individual Digital Footprint Assessment</h1>
+            <h2>Francis</h2>
+            <p class="member-info">Age Group: Adult | Risk Score: 4.0/10.0</p>
+        </header>
+        
+        <section class="individual-summary">
+            <h2>Assessment Summary</h2>
+            
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-value">4.0</div>
+                <div class="stat-label">Overall Risk Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">4.4</div>
+                <div class="stat-label">Social Media Risk</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">6.6</div>
+                <div class="stat-label">Privacy Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">4.3</div>
+                <div class="stat-label">Exposure Risk</div>
+            </div>
+        </div>
+        
+        </section>
+        
+        <section class="social-media-analysis">
+            <h2>Social Media Analysis</h2>
+            
+        <div class="stat-card">
+            <div class="stat-value">4.4</div>
+            <div class="stat-label">Overall Social Media Risk Score</div>
+        </div>
+        
+        <div class="platform-grid">
+        
+                <div class="platform-card">
+                    <div class="platform-name">Facebook</div>
+                    <div class="risk-indicator medium">Risk: 6.5/10.0</div>
+                    <h4>Risk Indicators:</h4>
+                    <ul>
+                <li>Two-factor authentication not enabled</li><li>Location data in photos</li><li>Workplace information visible</li>
+                    </ul>
+                </div>
+                
+                <div class="platform-card">
+                    <div class="platform-name">Instagram</div>
+                    <div class="risk-indicator medium">Risk: 4.2/10.0</div>
+                    <h4>Risk Indicators:</h4>
+                    <ul>
+                <li>Location tags in posts</li><li>Face recognition in photos</li>
+                    </ul>
+                </div>
+                
+                <div class="platform-card">
+                    <div class="platform-name">Twitter</div>
+                    <div class="risk-indicator low">Risk: 3.8/10.0</div>
+                    <h4>Risk Indicators:</h4>
+                    <ul>
+                <li>Personal information in tweets</li><li>Location mentioned in tweets</li>
+                    </ul>
+                </div>
+                
+                <div class="platform-card">
+                    <div class="platform-name">Linkedin</div>
+                    <div class="risk-indicator low">Risk: 2.5/10.0</div>
+                    <h4>Risk Indicators:</h4>
+                    <ul>
+                <li>Profile fully public</li><li>Activity broadcasts enabled</li>
+                    </ul>
+                </div>
+                
+                <div class="platform-card">
+                    <div class="platform-name">Tiktok</div>
+                    <div class="risk-indicator medium">Risk: 5.5/10.0</div>
+                    <h4>Risk Indicators:</h4>
+                    <ul>
+                <li>Face visible in videos</li><li>Location data in some videos</li><li>Potential for viral exposure</li>
+                    </ul>
+                </div>
+                
+                <div class="platform-card">
+                    <div class="platform-name">Snapchat</div>
+                    <div class="risk-indicator medium">Risk: 4.8/10.0</div>
+                    <h4>Risk Indicators:</h4>
+                    <ul>
+                <li>Stories visible to all friends</li><li>Face recognition data collection</li>
+                    </ul>
+                </div>
+                
+                <div class="platform-card">
+                    <div class="platform-name">Youtube</div>
+                    <div class="risk-indicator low">Risk: 3.5/10.0</div>
+                    <h4>Risk Indicators:</h4>
+                    <ul>
+                <li>Public video uploads</li><li>Comments on various channels</li><li>Channel information publicly available</li>
+                    </ul>
+                </div>
+                </div>
+        </section>
+        
+        <section class="privacy-analysis">
+            <h2>Privacy Settings Analysis</h2>
+            
+        <div class="stat-card">
+            <div class="stat-value">6.6</div>
+            <div class="stat-label">Privacy Score (out of 10.0)</div>
+        </div>
+        
+        </section>
+        
+        <section class="exposure-analysis">
+            <h2>Data Exposure Analysis</h2>
+            
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-value">4.3</div>
+                <div class="stat-label">Exposure Risk Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">13</div>
+                <div class="stat-label">Data Types Exposed</div>
+            </div>
+        </div>
+        <h3>Critical Exposures</h3><ul><li>High risk exposure in Email Breaches</li><li>Critical breach: Yahoo</li><li>Critical breach: Adobe</li><li>High risk exposure in Data Broker Sites</li></ul>
+        </section>
+        
+        <section class="individual-recommendations">
+            <h2>Personal Recommendations</h2>
+            <ul class='recommendations-list'><li class=''>Use strong, unique passwords for each platform</li><li class=''>Use privacy-focused search engines like DuckDuckGo</li><li class=''>Regularly monitor for new listings</li><li class=''>Regularly audit friend/follower lists</li><li class=''>Review privacy settings on linkedin</li><li class=''>Submit removal requests to data brokers</li><li class=''>Disable location sharing on tiktok</li><li class=''>Enable safe search for children and teens</li><li class=''>Enable two-factor authentication on facebook</li><li class=''>Request corrections for inaccurate information</li><li class=''>Change passwords for affected accounts</li><li class=''>Regularly delete voice recordings and viewing history</li><li class=''>Use physical mute buttons when privacy is needed</li><li class=''>Regularly clear search data</li><li class=''>Regularly review and update privacy settings</li><li class=''>Enable advanced threat protection</li><li class=''>Regularly review and revoke unnecessary app permissions</li><li class=''>Review what information is required to be public</li><li class=''>Monitor accounts for suspicious activity</li><li class=''>Consider privacy implications before public filings</li><li class=''>Understand your rights regarding government data</li><li class=''>Consider using unique passwords for each service</li><li class=''>Regularly clear browsing data</li><li class=''>Disable location sharing on twitter</li><li class=''>Minimize data sharing and collection</li><li class=''>Regularly audit and update privacy settings</li><li class=''>Enable two-factor authentication on all accounts</li><li class=''>Enable advanced security features like Personal Vault</li><li class=''>Review and limit third-party app permissions</li><li class=''>Consider using privacy protection services</li><li class=''>Keep software and firmware updated</li><li class=''>Enable two-factor authentication</li><li class=''>Review LinkedIn privacy settings</li><li class=''>Create alerts for your name and personal information</li><li class=''>Regularly audit professional profiles</li><li class=''>Continue monitoring social media privacy settings</li><li class=''>Practice good data hygiene and minimize information sharing</li><li class=''>Disable unnecessary data collection on smart devices</li><li class=''>Implement a regular data exposure monitoring routine</li><li class=''>Use privacy-focused alternatives where possible</li><li class=''>Disable ad personalization where possible</li><li class=''>Use opt-out services to remove from multiple sites</li><li class=''>Limit contact information visibility</li><li class=''>Use zero-knowledge cloud storage for highly sensitive data</li><li class=''>Disable app tracking where possible</li><li class=''>Be selective about professional information shared</li><li class=''>Use VPN for additional privacy protection</li><li class=''>Review and update privacy settings regularly</li><li class=''>Consider using privacy-focused browsers like Brave or Tor</li><li class=''>Use identity monitoring services</li><li class=''>Use privacy-focused search engines</li><li class=''>Continue monitoring public record exposure</li><li class=''>Enable strict tracking protection in all browsers</li><li class=''>Consider who can see your connections</li><li class=''>Use app-specific passwords for sensitive services</li><li class=''>Disable location sharing on facebook</li><li class=''>Keep apps updated for security patches</li><li class=''>Regularly review connected apps and permissions</li><li class=''>Use encrypted email services for sensitive communications</li><li class=''>Enable client-side encryption for sensitive files</li><li class=''>Regularly audit shared files and permissions</li><li class=''>Disable location sharing on instagram</li><li class=''>Review privacy settings on youtube</li><li class=''>Think before posting - consider long-term implications</li><li class=''>Disable search history and ad personalization</li><li class=''>Be cautious about sharing personal information</li></ul>
+        </section>
+    </div>
+</body>
+</html>

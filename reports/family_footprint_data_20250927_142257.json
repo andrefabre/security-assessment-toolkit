@@ -1,0 +1,1798 @@
+{
+  "family_name": "Bodgan",
+  "assessment_date": "2025-09-27T14:22:57.082901",
+  "family_members": [
+    {
+      "name": "Francis",
+      "age_group": "adult",
+      "added_at": "2025-09-27T14:21:27.260272"
+    },
+    {
+      "name": "Barry",
+      "age_group": "teen",
+      "added_at": "2025-09-27T14:21:27.540319"
+    }
+  ],
+  "individual_results": {
+    "Francis": {
+      "name": "Francis",
+      "age_group": "adult",
+      "social_media": {
+        "member_name": "Francis",
+        "age_group": "adult",
+        "audit_date": "2025-09-27T14:22:57.083329",
+        "platforms": {
+          "facebook": {
+            "platform": "Facebook",
+            "account_found": true,
+            "privacy_settings": {
+              "profile_visibility": "friends_only",
+              "post_visibility": "friends",
+              "friend_list_visibility": "friends",
+              "contact_info_visibility": "friends"
+            },
+            "security_features": {
+              "two_factor_auth": false,
+              "login_alerts": true,
+              "secure_browsing": true
+            },
+            "content_analysis": {
+              "public_posts": 2,
+              "personal_info_exposed": [
+                "location",
+                "workplace"
+              ],
+              "photos_with_location": 5
+            },
+            "risk_indicators": [
+              "Two-factor authentication not enabled",
+              "Location data in photos",
+              "Workplace information visible"
+            ],
+            "risk_score": 6.5
+          },
+          "instagram": {
+            "platform": "Instagram",
+            "account_found": true,
+            "privacy_settings": {
+              "account_private": false,
+              "story_visibility": "followers",
+              "activity_status": false,
+              "tagged_photo_approval": true
+            },
+            "security_features": {
+              "two_factor_auth": true,
+              "login_alerts": true,
+              "suspicious_activity_alerts": true
+            },
+            "content_analysis": {
+              "public_posts": 15,
+              "location_tags": 3,
+              "face_tags": 8
+            },
+            "risk_indicators": [
+              "Location tags in posts",
+              "Face recognition in photos"
+            ],
+            "risk_score": 4.2
+          },
+          "twitter": {
+            "platform": "Twitter",
+            "account_found": true,
+            "privacy_settings": {
+              "protected_tweets": false,
+              "photo_tagging": "followers_only",
+              "location_tagging": false,
+              "discoverability": "contacts_only"
+            },
+            "security_features": {
+              "two_factor_auth": true,
+              "password_reset_protection": true,
+              "login_verification": true
+            },
+            "content_analysis": {
+              "public_tweets": 45,
+              "personal_info_mentions": 2,
+              "location_mentions": 1
+            },
+            "risk_indicators": [
+              "Personal information in tweets",
+              "Location mentioned in tweets"
+            ],
+            "risk_score": 3.8
+          },
+          "linkedin": {
+            "platform": "LinkedIn",
+            "account_found": true,
+            "privacy_settings": {
+              "profile_visibility": "public",
+              "contact_info_visibility": "connections",
+              "activity_broadcasts": true,
+              "profile_photo": "public"
+            },
+            "security_features": {
+              "two_factor_auth": true,
+              "strong_password": true,
+              "login_alerts": true
+            },
+            "content_analysis": {
+              "professional_info": "appropriate",
+              "personal_details": "minimal",
+              "contact_information": "professional_only"
+            },
+            "risk_indicators": [
+              "Profile fully public",
+              "Activity broadcasts enabled"
+            ],
+            "risk_score": 2.5
+          },
+          "tiktok": {
+            "platform": "TikTok",
+            "account_found": true,
+            "privacy_settings": {
+              "private_account": false,
+              "who_can_comment": "everyone",
+              "who_can_duet": "everyone",
+              "download_allowed": false
+            },
+            "security_features": {
+              "two_factor_auth": true,
+              "login_alerts": true,
+              "restricted_mode": false
+            },
+            "content_analysis": {
+              "public_videos": 12,
+              "face_visible": 8,
+              "location_visible": 2
+            },
+            "risk_indicators": [
+              "Face visible in videos",
+              "Location data in some videos",
+              "Potential for viral exposure"
+            ],
+            "risk_score": 5.5
+          },
+          "snapchat": {
+            "platform": "Snapchat",
+            "account_found": true,
+            "privacy_settings": {
+              "who_can_contact": "everyone",
+              "who_can_view_story": "friends",
+              "location_sharing": false,
+              "quick_add": true
+            },
+            "security_features": {
+              "two_factor_auth": true,
+              "login_verification": true,
+              "screenshot_notifications": true
+            },
+            "content_analysis": {
+              "story_posts": 15,
+              "location_data": 0,
+              "face_filters_used": 20
+            },
+            "risk_indicators": [
+              "Stories visible to all friends",
+              "Face recognition data collection"
+            ],
+            "risk_score": 4.8
+          },
+          "youtube": {
+            "platform": "YouTube",
+            "account_found": true,
+            "privacy_settings": {
+              "channel_visibility": "public",
+              "subscriptions_visibility": "private",
+              "saved_playlists_visibility": "private",
+              "liked_videos_visibility": "private"
+            },
+            "security_features": {
+              "two_factor_auth": true,
+              "restricted_mode": false,
+              "comment_moderation": true
+            },
+            "content_analysis": {
+              "uploaded_videos": 3,
+              "public_playlists": 1,
+              "comments_made": 25
+            },
+            "risk_indicators": [
+              "Public video uploads",
+              "Comments on various channels",
+              "Channel information publicly available"
+            ],
+            "risk_score": 3.5
+          }
+        },
+        "overall_risk_score": 4.4,
+        "recommendations": [
+          "Use strong, unique passwords for each platform",
+          "Regularly audit friend/follower lists",
+          "Regularly review and update privacy settings",
+          "Review privacy settings on linkedin",
+          "Disable location sharing on facebook",
+          "Disable location sharing on tiktok",
+          "Enable two-factor authentication on facebook",
+          "Disable location sharing on twitter",
+          "Disable location sharing on instagram",
+          "Review privacy settings on youtube",
+          "Think before posting - consider long-term implications",
+          "Be cautious about sharing personal information"
+        ]
+      },
+      "privacy_settings": {
+        "member_name": "Francis",
+        "age_group": "adult",
+        "audit_date": "2025-09-27T14:22:57.083748",
+        "service_categories": {
+          "web_browsers": {
+            "category": "Web Browsers",
+            "browsers": {
+              "chrome": {
+                "privacy_settings": {
+                  "tracking_protection": "standard",
+                  "third_party_cookies": "blocked",
+                  "safe_browsing": "enhanced",
+                  "sync_enabled": true,
+                  "password_manager": "enabled",
+                  "autofill": "enabled"
+                },
+                "extensions": [
+                  {
+                    "name": "uBlock Origin",
+                    "privacy_rating": "excellent"
+                  },
+                  {
+                    "name": "Privacy Badger",
+                    "privacy_rating": "excellent"
+                  }
+                ],
+                "privacy_score": 7.5,
+                "issues": [
+                  "Sync might share browsing data",
+                  "Autofill stores personal data"
+                ]
+              },
+              "firefox": {
+                "privacy_settings": {
+                  "tracking_protection": "strict",
+                  "enhanced_tracking_protection": true,
+                  "dns_over_https": true,
+                  "data_collection": "minimal",
+                  "cookies": "strict"
+                },
+                "privacy_score": 8.5,
+                "issues": [
+                  "Default search engine collects data"
+                ]
+              }
+            },
+            "overall_score": 8.0,
+            "recommendations": [
+              "Enable strict tracking protection in all browsers",
+              "Use privacy-focused search engines",
+              "Regularly clear browsing data",
+              "Consider using privacy-focused browsers like Brave or Tor"
+            ]
+          },
+          "email_services": {
+            "category": "Email Services",
+            "services": {
+              "gmail": {
+                "privacy_settings": {
+                  "ad_personalization": "enabled",
+                  "web_activity_tracking": "enabled",
+                  "location_history": "disabled",
+                  "two_factor_auth": "enabled",
+                  "less_secure_apps": "disabled"
+                },
+                "data_collection": {
+                  "email_content_scanning": true,
+                  "contact_data": true,
+                  "usage_patterns": true
+                },
+                "privacy_score": 5.5,
+                "issues": [
+                  "Email content scanned for ads",
+                  "Extensive data collection for personalization",
+                  "Web activity tracked across Google services"
+                ]
+              },
+              "outlook": {
+                "privacy_settings": {
+                  "targeted_ads": "limited",
+                  "data_sharing": "minimal",
+                  "two_factor_auth": "enabled",
+                  "security_notifications": "enabled"
+                },
+                "privacy_score": 7.0,
+                "issues": [
+                  "Some data sharing with Microsoft services"
+                ]
+              }
+            },
+            "overall_score": 6.25,
+            "recommendations": [
+              "Disable ad personalization where possible",
+              "Use encrypted email services for sensitive communications",
+              "Regularly review connected apps and permissions",
+              "Enable advanced threat protection"
+            ]
+          },
+          "cloud_storage": {
+            "category": "Cloud Storage",
+            "services": {
+              "google_drive": {
+                "privacy_settings": {
+                  "file_sharing": "restricted",
+                  "public_links": "disabled",
+                  "third_party_access": "limited",
+                  "backup_sync": "enabled",
+                  "offline_access": "enabled"
+                },
+                "encryption": {
+                  "in_transit": true,
+                  "at_rest": true,
+                  "client_side": false
+                },
+                "privacy_score": 6.5,
+                "issues": [
+                  "No client-side encryption",
+                  "Files accessible to Google for processing",
+                  "Metadata collection for service improvement"
+                ]
+              },
+              "onedrive": {
+                "privacy_settings": {
+                  "personal_vault": "enabled",
+                  "sharing_controls": "strict",
+                  "version_history": "enabled",
+                  "ransomware_protection": "enabled"
+                },
+                "privacy_score": 7.5,
+                "issues": [
+                  "Data processed for AI features"
+                ]
+              }
+            },
+            "overall_score": 7.0,
+            "recommendations": [
+              "Enable client-side encryption for sensitive files",
+              "Regularly audit shared files and permissions",
+              "Use zero-knowledge cloud storage for highly sensitive data",
+              "Enable advanced security features like Personal Vault"
+            ]
+          },
+          "search_engines": {
+            "category": "Search Engines",
+            "services": {
+              "google_search": {
+                "privacy_settings": {
+                  "search_history": "enabled",
+                  "ad_personalization": "enabled",
+                  "location_based_results": "enabled",
+                  "safe_search": "off",
+                  "activity_controls": "some_disabled"
+                },
+                "data_collection": {
+                  "search_queries": true,
+                  "click_patterns": true,
+                  "location_data": true,
+                  "device_information": true
+                },
+                "privacy_score": 3.5,
+                "issues": [
+                  "Extensive search history collection",
+                  "Search data used for ad targeting",
+                  "Location tracking for results",
+                  "Cross-service data correlation"
+                ]
+              },
+              "duckduckgo": {
+                "privacy_settings": {
+                  "search_history": "never_stored",
+                  "tracking_blocked": "comprehensive",
+                  "location_tracking": "disabled",
+                  "ad_targeting": "none"
+                },
+                "privacy_score": 9.5,
+                "issues": [
+                  "No issues identified"
+                ]
+              }
+            },
+            "overall_score": 6.5,
+            "recommendations": [
+              "Use privacy-focused search engines like DuckDuckGo",
+              "Disable search history and ad personalization",
+              "Enable safe search for children and teens",
+              "Regularly clear search data"
+            ]
+          },
+          "mobile_apps": {
+            "category": "Mobile Apps",
+            "platform_settings": {
+              "ios": {
+                "app_tracking": "ask_not_to_track",
+                "location_services": "selective",
+                "camera_access": "app_by_app",
+                "microphone_access": "app_by_app",
+                "contacts_access": "limited",
+                "analytics_sharing": "disabled"
+              },
+              "android": {
+                "app_permissions": "granular_control",
+                "location_history": "disabled",
+                "ad_personalization": "opt_out",
+                "usage_diagnostics": "minimal",
+                "backup_to_cloud": "encrypted"
+              }
+            },
+            "high_risk_apps": [
+              {
+                "name": "Social Media Apps",
+                "permissions": [
+                  "camera",
+                  "microphone",
+                  "location",
+                  "contacts"
+                ],
+                "data_collection": "extensive",
+                "privacy_concerns": [
+                  "location tracking",
+                  "contact access",
+                  "behavioral analysis"
+                ]
+              },
+              {
+                "name": "Gaming Apps",
+                "permissions": [
+                  "device_id",
+                  "advertising_id"
+                ],
+                "data_collection": "moderate",
+                "privacy_concerns": [
+                  "ad targeting",
+                  "usage patterns"
+                ]
+              }
+            ],
+            "overall_score": 6.8,
+            "recommendations": [
+              "Regularly review and revoke unnecessary app permissions",
+              "Disable app tracking where possible",
+              "Use app-specific passwords for sensitive services",
+              "Keep apps updated for security patches"
+            ]
+          },
+          "smart_devices": {
+            "category": "Smart Devices",
+            "devices": {
+              "smart_speaker": {
+                "privacy_settings": {
+                  "voice_recordings_saved": "enabled",
+                  "human_review": "opt_out",
+                  "mute_button_used": "regularly",
+                  "wake_word_detection": "device_only"
+                },
+                "privacy_score": 6.0,
+                "issues": [
+                  "Voice recordings stored in cloud",
+                  "Potential for accidental activation",
+                  "Data sharing with third parties"
+                ]
+              },
+              "smart_tv": {
+                "privacy_settings": {
+                  "viewing_data_collection": "enabled",
+                  "ad_personalization": "enabled",
+                  "automatic_content_recognition": "enabled",
+                  "microphone_access": "apps_only"
+                },
+                "privacy_score": 4.5,
+                "issues": [
+                  "Extensive viewing habit tracking",
+                  "Content recognition for ad targeting",
+                  "Data sharing with content providers"
+                ]
+              }
+            },
+            "overall_score": 5.25,
+            "recommendations": [
+              "Disable unnecessary data collection on smart devices",
+              "Regularly delete voice recordings and viewing history",
+              "Use physical mute buttons when privacy is needed",
+              "Review and limit third-party app permissions"
+            ]
+          }
+        },
+        "overall_privacy_score": 6.633333333333333,
+        "critical_issues": [],
+        "recommendations": [
+          "Use privacy-focused search engines like DuckDuckGo",
+          "Enable safe search for children and teens",
+          "Regularly delete voice recordings and viewing history",
+          "Regularly clear search data",
+          "Enable advanced threat protection",
+          "Use physical mute buttons when privacy is needed",
+          "Regularly review and revoke unnecessary app permissions",
+          "Regularly clear browsing data",
+          "Minimize data sharing and collection",
+          "Regularly audit and update privacy settings",
+          "Enable two-factor authentication on all accounts",
+          "Enable advanced security features like Personal Vault",
+          "Review and limit third-party app permissions",
+          "Keep software and firmware updated",
+          "Disable unnecessary data collection on smart devices",
+          "Use privacy-focused alternatives where possible",
+          "Disable ad personalization where possible",
+          "Use zero-knowledge cloud storage for highly sensitive data",
+          "Disable app tracking where possible",
+          "Use VPN for additional privacy protection",
+          "Consider using privacy-focused browsers like Brave or Tor",
+          "Use privacy-focused search engines",
+          "Enable strict tracking protection in all browsers",
+          "Use app-specific passwords for sensitive services",
+          "Keep apps updated for security patches",
+          "Regularly review connected apps and permissions",
+          "Use encrypted email services for sensitive communications",
+          "Enable client-side encryption for sensitive files",
+          "Regularly audit shared files and permissions",
+          "Disable search history and ad personalization"
+        ]
+      },
+      "data_exposure": {
+        "member_name": "Francis",
+        "age_group": "adult",
+        "audit_date": "2025-09-27T14:22:57.084098",
+        "exposure_checks": {
+          "email_breaches": {
+            "check_type": "Email Breaches",
+            "emails_checked": 2,
+            "breaches_found": 4,
+            "breach_details": [
+              {
+                "service": "Yahoo",
+                "date": "2014-09-01",
+                "data_compromised": [
+                  "email",
+                  "password",
+                  "security_questions",
+                  "phone"
+                ],
+                "severity": "critical"
+              },
+              {
+                "service": "LinkedIn",
+                "date": "2021-06-15",
+                "data_compromised": [
+                  "email",
+                  "password_hash",
+                  "profile_data"
+                ],
+                "severity": "high"
+              },
+              {
+                "service": "Adobe",
+                "date": "2013-10-03",
+                "data_compromised": [
+                  "email",
+                  "password",
+                  "username"
+                ],
+                "severity": "critical"
+              },
+              {
+                "service": "Facebook",
+                "date": "2019-04-03",
+                "data_compromised": [
+                  "email",
+                  "phone",
+                  "profile_data"
+                ],
+                "severity": "high"
+              }
+            ],
+            "risk_score": 8.0,
+            "last_checked": "2025-09-27T14:22:57.084169",
+            "recommendations": [
+              "Change passwords for affected accounts",
+              "Enable two-factor authentication",
+              "Monitor accounts for suspicious activity",
+              "Consider using unique passwords for each service"
+            ]
+          },
+          "social_media_leaks": {
+            "check_type": "Social Media Leaks",
+            "platforms_checked": [
+              "Facebook",
+              "Instagram",
+              "Twitter",
+              "LinkedIn",
+              "TikTok"
+            ],
+            "leaks_found": 0,
+            "leak_details": [],
+            "risk_score": 2.0,
+            "recommendations": [
+              "Continue monitoring social media privacy settings"
+            ]
+          },
+          "public_records": {
+            "check_type": "Public Records",
+            "records_found": 0,
+            "record_details": [],
+            "risk_score": 0.0,
+            "recommendations": [
+              "Continue monitoring public record exposure"
+            ]
+          },
+          "data_broker_sites": {
+            "check_type": "Data Broker Sites",
+            "brokers_checked": 15,
+            "listings_found": 3,
+            "broker_details": [
+              {
+                "broker": "WhitePages",
+                "data_found": [
+                  "name",
+                  "address",
+                  "phone",
+                  "age",
+                  "relatives"
+                ],
+                "removal_possible": true,
+                "privacy_risk": "high"
+              },
+              {
+                "broker": "Spokeo",
+                "data_found": [
+                  "name",
+                  "address",
+                  "phone",
+                  "email",
+                  "social_profiles"
+                ],
+                "removal_possible": true,
+                "privacy_risk": "high"
+              },
+              {
+                "broker": "BeenVerified",
+                "data_found": [
+                  "name",
+                  "address",
+                  "background_info",
+                  "relatives"
+                ],
+                "removal_possible": true,
+                "privacy_risk": "medium"
+              }
+            ],
+            "removable_listings": 3,
+            "risk_score": 10.0,
+            "recommendations": [
+              "Submit removal requests to data brokers",
+              "Use opt-out services to remove from multiple sites",
+              "Regularly monitor for new listings",
+              "Consider using privacy protection services"
+            ]
+          },
+          "government_databases": {
+            "check_type": "Government Databases",
+            "databases_checked": 8,
+            "exposures_found": 2,
+            "exposure_details": [
+              {
+                "database": "professional_licenses",
+                "data_exposed": [
+                  "name",
+                  "license_number",
+                  "address",
+                  "discipline_records"
+                ],
+                "agency": "state_licensing_board",
+                "privacy_risk": "medium"
+              },
+              {
+                "database": "campaign_contributions",
+                "data_exposed": [
+                  "name",
+                  "address",
+                  "employer",
+                  "contribution_amount"
+                ],
+                "agency": "election_commission",
+                "privacy_risk": "low"
+              }
+            ],
+            "risk_score": 4.0,
+            "recommendations": [
+              "Review what information is required to be public",
+              "Request corrections for inaccurate information",
+              "Understand your rights regarding government data",
+              "Consider privacy implications before public filings"
+            ]
+          },
+          "professional_networks": {
+            "check_type": "Professional Networks",
+            "networks_checked": [
+              "LinkedIn",
+              "Industry Directories",
+              "Professional Associations"
+            ],
+            "exposure_level": "minimal",
+            "exposure_details": {
+              "linkedin": {
+                "profile_public": true,
+                "contact_info_visible": false,
+                "employment_history": true,
+                "connections_visible": false,
+                "activity_visible": false
+              },
+              "professional_directories": {
+                "industry_listings": false,
+                "conference_attendee_lists": false,
+                "professional_certifications": true
+              }
+            },
+            "risk_score": 2.0,
+            "recommendations": [
+              "Review LinkedIn privacy settings",
+              "Limit contact information visibility",
+              "Consider who can see your connections",
+              "Be selective about professional information shared",
+              "Regularly audit professional profiles"
+            ]
+          }
+        },
+        "overall_exposure_risk": 4.333333333333333,
+        "critical_exposures": [
+          "High risk exposure in Email Breaches",
+          "Critical breach: Yahoo",
+          "Critical breach: Adobe",
+          "High risk exposure in Data Broker Sites"
+        ],
+        "exposed_data_types": [
+          "profile_data",
+          "password_hash",
+          "age",
+          "email",
+          "social_profiles",
+          "name",
+          "address",
+          "relatives",
+          "security_questions",
+          "background_info",
+          "phone",
+          "password",
+          "username"
+        ],
+        "recommendations": [
+          "Regularly monitor for new listings",
+          "Submit removal requests to data brokers",
+          "Request corrections for inaccurate information",
+          "Change passwords for affected accounts",
+          "Review what information is required to be public",
+          "Monitor accounts for suspicious activity",
+          "Consider privacy implications before public filings",
+          "Understand your rights regarding government data",
+          "Consider using unique passwords for each service",
+          "Consider using privacy protection services",
+          "Enable two-factor authentication",
+          "Review LinkedIn privacy settings",
+          "Create alerts for your name and personal information",
+          "Regularly audit professional profiles",
+          "Continue monitoring social media privacy settings",
+          "Practice good data hygiene and minimize information sharing",
+          "Implement a regular data exposure monitoring routine",
+          "Use opt-out services to remove from multiple sites",
+          "Limit contact information visibility",
+          "Be selective about professional information shared",
+          "Use identity monitoring services",
+          "Continue monitoring public record exposure",
+          "Consider who can see your connections",
+          "Review and update privacy settings regularly"
+        ]
+      },
+      "risk_score": 4.033333333333334,
+      "recommendations": [
+        "Use strong, unique passwords for each platform",
+        "Use privacy-focused search engines like DuckDuckGo",
+        "Regularly monitor for new listings",
+        "Regularly audit friend/follower lists",
+        "Review privacy settings on linkedin",
+        "Submit removal requests to data brokers",
+        "Disable location sharing on tiktok",
+        "Enable safe search for children and teens",
+        "Enable two-factor authentication on facebook",
+        "Request corrections for inaccurate information",
+        "Change passwords for affected accounts",
+        "Regularly delete voice recordings and viewing history",
+        "Use physical mute buttons when privacy is needed",
+        "Regularly clear search data",
+        "Regularly review and update privacy settings",
+        "Enable advanced threat protection",
+        "Regularly review and revoke unnecessary app permissions",
+        "Review what information is required to be public",
+        "Monitor accounts for suspicious activity",
+        "Consider privacy implications before public filings",
+        "Understand your rights regarding government data",
+        "Consider using unique passwords for each service",
+        "Regularly clear browsing data",
+        "Disable location sharing on twitter",
+        "Minimize data sharing and collection",
+        "Regularly audit and update privacy settings",
+        "Enable two-factor authentication on all accounts",
+        "Enable advanced security features like Personal Vault",
+        "Review and limit third-party app permissions",
+        "Consider using privacy protection services",
+        "Keep software and firmware updated",
+        "Enable two-factor authentication",
+        "Review LinkedIn privacy settings",
+        "Create alerts for your name and personal information",
+        "Regularly audit professional profiles",
+        "Continue monitoring social media privacy settings",
+        "Practice good data hygiene and minimize information sharing",
+        "Disable unnecessary data collection on smart devices",
+        "Implement a regular data exposure monitoring routine",
+        "Use privacy-focused alternatives where possible",
+        "Disable ad personalization where possible",
+        "Use opt-out services to remove from multiple sites",
+        "Limit contact information visibility",
+        "Use zero-knowledge cloud storage for highly sensitive data",
+        "Disable app tracking where possible",
+        "Be selective about professional information shared",
+        "Use VPN for additional privacy protection",
+        "Review and update privacy settings regularly",
+        "Consider using privacy-focused browsers like Brave or Tor",
+        "Use identity monitoring services",
+        "Use privacy-focused search engines",
+        "Continue monitoring public record exposure",
+        "Enable strict tracking protection in all browsers",
+        "Consider who can see your connections",
+        "Use app-specific passwords for sensitive services",
+        "Disable location sharing on facebook",
+        "Keep apps updated for security patches",
+        "Regularly review connected apps and permissions",
+        "Use encrypted email services for sensitive communications",
+        "Enable client-side encryption for sensitive files",
+        "Regularly audit shared files and permissions",
+        "Disable location sharing on instagram",
+        "Review privacy settings on youtube",
+        "Think before posting - consider long-term implications",
+        "Disable search history and ad personalization",
+        "Be cautious about sharing personal information"
+      ]
+    },
+    "Barry": {
+      "name": "Barry",
+      "age_group": "teen",
+      "social_media": {
+        "member_name": "Barry",
+        "age_group": "teen",
+        "audit_date": "2025-09-27T14:22:57.084631",
+        "platforms": {
+          "facebook": {
+            "platform": "Facebook",
+            "account_found": true,
+            "privacy_settings": {
+              "profile_visibility": "friends_only",
+              "post_visibility": "friends",
+              "friend_list_visibility": "friends",
+              "contact_info_visibility": "friends"
+            },
+            "security_features": {
+              "two_factor_auth": false,
+              "login_alerts": true,
+              "secure_browsing": true
+            },
+            "content_analysis": {
+              "public_posts": 2,
+              "personal_info_exposed": [
+                "location",
+                "workplace"
+              ],
+              "photos_with_location": 5
+            },
+            "risk_indicators": [
+              "Two-factor authentication not enabled",
+              "Location data in photos",
+              "Workplace information visible"
+            ],
+            "risk_score": 6.5
+          },
+          "instagram": {
+            "platform": "Instagram",
+            "account_found": true,
+            "privacy_settings": {
+              "account_private": true,
+              "story_visibility": "followers",
+              "activity_status": false,
+              "tagged_photo_approval": true
+            },
+            "security_features": {
+              "two_factor_auth": true,
+              "login_alerts": true,
+              "suspicious_activity_alerts": true
+            },
+            "content_analysis": {
+              "public_posts": 0,
+              "location_tags": 3,
+              "face_tags": 8
+            },
+            "risk_indicators": [
+              "Location tags in posts",
+              "Face recognition in photos"
+            ],
+            "risk_score": 4.2
+          },
+          "twitter": {
+            "platform": "Twitter",
+            "account_found": true,
+            "privacy_settings": {
+              "protected_tweets": true,
+              "photo_tagging": "followers_only",
+              "location_tagging": false,
+              "discoverability": "contacts_only"
+            },
+            "security_features": {
+              "two_factor_auth": true,
+              "password_reset_protection": true,
+              "login_verification": true
+            },
+            "content_analysis": {
+              "public_tweets": 0,
+              "personal_info_mentions": 2,
+              "location_mentions": 1
+            },
+            "risk_indicators": [
+              "Personal information in tweets",
+              "Location mentioned in tweets"
+            ],
+            "risk_score": 3.8
+          },
+          "linkedin": {
+            "platform": "LinkedIn",
+            "account_found": false,
+            "note": "Age-appropriate - no LinkedIn account expected"
+          },
+          "tiktok": {
+            "platform": "TikTok",
+            "account_found": true,
+            "privacy_settings": {
+              "private_account": true,
+              "who_can_comment": "friends",
+              "who_can_duet": "friends",
+              "download_allowed": false
+            },
+            "security_features": {
+              "two_factor_auth": true,
+              "login_alerts": true,
+              "restricted_mode": true
+            },
+            "content_analysis": {
+              "public_videos": 0,
+              "face_visible": 8,
+              "location_visible": 2
+            },
+            "risk_indicators": [
+              "Face visible in videos",
+              "Location data in some videos",
+              "Potential for viral exposure"
+            ],
+            "risk_score": 7.2
+          },
+          "snapchat": {
+            "platform": "Snapchat",
+            "account_found": true,
+            "privacy_settings": {
+              "who_can_contact": "friends",
+              "who_can_view_story": "friends",
+              "location_sharing": false,
+              "quick_add": false
+            },
+            "security_features": {
+              "two_factor_auth": true,
+              "login_verification": true,
+              "screenshot_notifications": true
+            },
+            "content_analysis": {
+              "story_posts": 15,
+              "location_data": 0,
+              "face_filters_used": 20
+            },
+            "risk_indicators": [
+              "Stories visible to all friends",
+              "Face recognition data collection"
+            ],
+            "risk_score": 4.8
+          },
+          "youtube": {
+            "platform": "YouTube",
+            "account_found": true,
+            "privacy_settings": {
+              "channel_visibility": "public",
+              "subscriptions_visibility": "private",
+              "saved_playlists_visibility": "private",
+              "liked_videos_visibility": "private"
+            },
+            "security_features": {
+              "two_factor_auth": true,
+              "restricted_mode": true,
+              "comment_moderation": true
+            },
+            "content_analysis": {
+              "uploaded_videos": 3,
+              "public_playlists": 1,
+              "comments_made": 25
+            },
+            "risk_indicators": [
+              "Public video uploads",
+              "Comments on various channels",
+              "Channel information publicly available"
+            ],
+            "risk_score": 3.5
+          }
+        },
+        "overall_risk_score": 5.0,
+        "recommendations": [
+          "Enable parental controls where available",
+          "Use strong, unique passwords for each platform",
+          "Regularly audit friend/follower lists",
+          "Regularly review and update privacy settings",
+          "Disable location sharing on facebook",
+          "Disable location sharing on tiktok",
+          "Regularly review friend/follower lists",
+          "Enable two-factor authentication on facebook",
+          "Ensure all social media accounts are set to private",
+          "Disable location sharing on twitter",
+          "Review privacy settings on youtube",
+          "Turn off activity status indicators",
+          "Disable location sharing on instagram",
+          "Disable location sharing on all platforms",
+          "Think before posting - consider long-term implications",
+          "Be cautious about sharing personal information"
+        ]
+      },
+      "privacy_settings": {
+        "member_name": "Barry",
+        "age_group": "teen",
+        "audit_date": "2025-09-27T14:22:57.084815",
+        "service_categories": {
+          "web_browsers": {
+            "category": "Web Browsers",
+            "browsers": {
+              "chrome": {
+                "privacy_settings": {
+                  "tracking_protection": "standard",
+                  "third_party_cookies": "blocked",
+                  "safe_browsing": "enhanced",
+                  "sync_enabled": true,
+                  "password_manager": "enabled",
+                  "autofill": "enabled"
+                },
+                "extensions": [
+                  {
+                    "name": "uBlock Origin",
+                    "privacy_rating": "excellent"
+                  },
+                  {
+                    "name": "Privacy Badger",
+                    "privacy_rating": "excellent"
+                  }
+                ],
+                "privacy_score": 7.5,
+                "issues": [
+                  "Sync might share browsing data",
+                  "Autofill stores personal data"
+                ]
+              },
+              "firefox": {
+                "privacy_settings": {
+                  "tracking_protection": "strict",
+                  "enhanced_tracking_protection": true,
+                  "dns_over_https": true,
+                  "data_collection": "minimal",
+                  "cookies": "strict"
+                },
+                "privacy_score": 8.5,
+                "issues": [
+                  "Default search engine collects data"
+                ]
+              }
+            },
+            "overall_score": 8.0,
+            "recommendations": [
+              "Enable strict tracking protection in all browsers",
+              "Use privacy-focused search engines",
+              "Regularly clear browsing data",
+              "Consider using privacy-focused browsers like Brave or Tor"
+            ]
+          },
+          "email_services": {
+            "category": "Email Services",
+            "services": {
+              "gmail": {
+                "privacy_settings": {
+                  "ad_personalization": "enabled",
+                  "web_activity_tracking": "enabled",
+                  "location_history": "disabled",
+                  "two_factor_auth": "enabled",
+                  "less_secure_apps": "disabled"
+                },
+                "data_collection": {
+                  "email_content_scanning": true,
+                  "contact_data": true,
+                  "usage_patterns": true
+                },
+                "privacy_score": 5.5,
+                "issues": [
+                  "Email content scanned for ads",
+                  "Extensive data collection for personalization",
+                  "Web activity tracked across Google services"
+                ]
+              },
+              "outlook": {
+                "privacy_settings": {
+                  "targeted_ads": "limited",
+                  "data_sharing": "minimal",
+                  "two_factor_auth": "enabled",
+                  "security_notifications": "enabled"
+                },
+                "privacy_score": 7.0,
+                "issues": [
+                  "Some data sharing with Microsoft services"
+                ]
+              }
+            },
+            "overall_score": 6.25,
+            "recommendations": [
+              "Disable ad personalization where possible",
+              "Use encrypted email services for sensitive communications",
+              "Regularly review connected apps and permissions",
+              "Enable advanced threat protection"
+            ]
+          },
+          "cloud_storage": {
+            "category": "Cloud Storage",
+            "services": {
+              "google_drive": {
+                "privacy_settings": {
+                  "file_sharing": "restricted",
+                  "public_links": "disabled",
+                  "third_party_access": "limited",
+                  "backup_sync": "enabled",
+                  "offline_access": "enabled"
+                },
+                "encryption": {
+                  "in_transit": true,
+                  "at_rest": true,
+                  "client_side": false
+                },
+                "privacy_score": 6.5,
+                "issues": [
+                  "No client-side encryption",
+                  "Files accessible to Google for processing",
+                  "Metadata collection for service improvement"
+                ]
+              },
+              "onedrive": {
+                "privacy_settings": {
+                  "personal_vault": "enabled",
+                  "sharing_controls": "strict",
+                  "version_history": "enabled",
+                  "ransomware_protection": "enabled"
+                },
+                "privacy_score": 7.5,
+                "issues": [
+                  "Data processed for AI features"
+                ]
+              }
+            },
+            "overall_score": 7.0,
+            "recommendations": [
+              "Enable client-side encryption for sensitive files",
+              "Regularly audit shared files and permissions",
+              "Use zero-knowledge cloud storage for highly sensitive data",
+              "Enable advanced security features like Personal Vault"
+            ]
+          },
+          "search_engines": {
+            "category": "Search Engines",
+            "services": {
+              "google_search": {
+                "privacy_settings": {
+                  "search_history": "enabled",
+                  "ad_personalization": "enabled",
+                  "location_based_results": "enabled",
+                  "safe_search": "moderate",
+                  "activity_controls": "some_disabled"
+                },
+                "data_collection": {
+                  "search_queries": true,
+                  "click_patterns": true,
+                  "location_data": true,
+                  "device_information": true
+                },
+                "privacy_score": 3.5,
+                "issues": [
+                  "Extensive search history collection",
+                  "Search data used for ad targeting",
+                  "Location tracking for results",
+                  "Cross-service data correlation"
+                ]
+              },
+              "duckduckgo": {
+                "privacy_settings": {
+                  "search_history": "never_stored",
+                  "tracking_blocked": "comprehensive",
+                  "location_tracking": "disabled",
+                  "ad_targeting": "none"
+                },
+                "privacy_score": 9.5,
+                "issues": [
+                  "No issues identified"
+                ]
+              }
+            },
+            "overall_score": 6.5,
+            "recommendations": [
+              "Use privacy-focused search engines like DuckDuckGo",
+              "Disable search history and ad personalization",
+              "Enable safe search for children and teens",
+              "Regularly clear search data"
+            ]
+          },
+          "mobile_apps": {
+            "category": "Mobile Apps",
+            "platform_settings": {
+              "ios": {
+                "app_tracking": "ask_not_to_track",
+                "location_services": "selective",
+                "camera_access": "app_by_app",
+                "microphone_access": "app_by_app",
+                "contacts_access": "limited",
+                "analytics_sharing": "disabled"
+              },
+              "android": {
+                "app_permissions": "granular_control",
+                "location_history": "disabled",
+                "ad_personalization": "opt_out",
+                "usage_diagnostics": "minimal",
+                "backup_to_cloud": "encrypted"
+              }
+            },
+            "high_risk_apps": [
+              {
+                "name": "Social Media Apps",
+                "permissions": [
+                  "camera",
+                  "microphone",
+                  "location",
+                  "contacts"
+                ],
+                "data_collection": "extensive",
+                "privacy_concerns": [
+                  "location tracking",
+                  "contact access",
+                  "behavioral analysis"
+                ]
+              },
+              {
+                "name": "Gaming Apps",
+                "permissions": [
+                  "device_id",
+                  "advertising_id"
+                ],
+                "data_collection": "moderate",
+                "privacy_concerns": [
+                  "ad targeting",
+                  "usage patterns"
+                ]
+              }
+            ],
+            "overall_score": 6.8,
+            "recommendations": [
+              "Regularly review and revoke unnecessary app permissions",
+              "Disable app tracking where possible",
+              "Use app-specific passwords for sensitive services",
+              "Keep apps updated for security patches"
+            ]
+          },
+          "smart_devices": {
+            "category": "Smart Devices",
+            "devices": {
+              "smart_speaker": {
+                "privacy_settings": {
+                  "voice_recordings_saved": "enabled",
+                  "human_review": "opt_out",
+                  "mute_button_used": "regularly",
+                  "wake_word_detection": "device_only"
+                },
+                "privacy_score": 6.0,
+                "issues": [
+                  "Voice recordings stored in cloud",
+                  "Potential for accidental activation",
+                  "Data sharing with third parties"
+                ]
+              },
+              "smart_tv": {
+                "privacy_settings": {
+                  "viewing_data_collection": "enabled",
+                  "ad_personalization": "enabled",
+                  "automatic_content_recognition": "enabled",
+                  "microphone_access": "apps_only"
+                },
+                "privacy_score": 4.5,
+                "issues": [
+                  "Extensive viewing habit tracking",
+                  "Content recognition for ad targeting",
+                  "Data sharing with content providers"
+                ]
+              }
+            },
+            "overall_score": 5.25,
+            "recommendations": [
+              "Disable unnecessary data collection on smart devices",
+              "Regularly delete voice recordings and viewing history",
+              "Use physical mute buttons when privacy is needed",
+              "Review and limit third-party app permissions"
+            ]
+          }
+        },
+        "overall_privacy_score": 6.633333333333333,
+        "critical_issues": [],
+        "recommendations": [
+          "Use privacy-focused search engines like DuckDuckGo",
+          "Educate about privacy risks and safe online practices",
+          "Enable safe search for children and teens",
+          "Regularly monitor and review privacy settings",
+          "Regularly delete voice recordings and viewing history",
+          "Regularly clear search data",
+          "Enable advanced threat protection",
+          "Use physical mute buttons when privacy is needed",
+          "Regularly review and revoke unnecessary app permissions",
+          "Regularly clear browsing data",
+          "Minimize data sharing and collection",
+          "Regularly audit and update privacy settings",
+          "Enable two-factor authentication on all accounts",
+          "Enable advanced security features like Personal Vault",
+          "Review and limit third-party app permissions",
+          "Keep software and firmware updated",
+          "Enable strict parental controls on all devices and services",
+          "Use family-safe search engines and content filters",
+          "Disable unnecessary data collection on smart devices",
+          "Use privacy-focused alternatives where possible",
+          "Disable ad personalization where possible",
+          "Use zero-knowledge cloud storage for highly sensitive data",
+          "Disable app tracking where possible",
+          "Use VPN for additional privacy protection",
+          "Consider using privacy-focused browsers like Brave or Tor",
+          "Use privacy-focused search engines",
+          "Enable strict tracking protection in all browsers",
+          "Use app-specific passwords for sensitive services",
+          "Keep apps updated for security patches",
+          "Regularly review connected apps and permissions",
+          "Use encrypted email services for sensitive communications",
+          "Enable client-side encryption for sensitive files",
+          "Regularly audit shared files and permissions",
+          "Disable search history and ad personalization"
+        ]
+      },
+      "data_exposure": {
+        "member_name": "Barry",
+        "age_group": "teen",
+        "audit_date": "2025-09-27T14:22:57.084997",
+        "exposure_checks": {
+          "email_breaches": {
+            "check_type": "Email Breaches",
+            "emails_checked": 2,
+            "breaches_found": 5,
+            "breach_details": [
+              {
+                "service": "Adobe",
+                "date": "2013-10-03",
+                "data_compromised": [
+                  "email",
+                  "password",
+                  "username"
+                ],
+                "severity": "critical"
+              },
+              {
+                "service": "Yahoo",
+                "date": "2014-09-01",
+                "data_compromised": [
+                  "email",
+                  "password",
+                  "security_questions",
+                  "phone"
+                ],
+                "severity": "critical"
+              },
+              {
+                "service": "LinkedIn",
+                "date": "2021-06-15",
+                "data_compromised": [
+                  "email",
+                  "password_hash",
+                  "profile_data"
+                ],
+                "severity": "high"
+              },
+              {
+                "service": "Facebook",
+                "date": "2019-04-03",
+                "data_compromised": [
+                  "email",
+                  "phone",
+                  "profile_data"
+                ],
+                "severity": "high"
+              },
+              {
+                "service": "Dropbox",
+                "date": "2012-07-01",
+                "data_compromised": [
+                  "email",
+                  "password_hash"
+                ],
+                "severity": "medium"
+              }
+            ],
+            "risk_score": 10.0,
+            "last_checked": "2025-09-27T14:22:57.085026",
+            "recommendations": [
+              "Change passwords for affected accounts",
+              "Enable two-factor authentication",
+              "Monitor accounts for suspicious activity",
+              "Consider using unique passwords for each service"
+            ]
+          },
+          "social_media_leaks": {
+            "check_type": "Social Media Leaks",
+            "platforms_checked": [
+              "Facebook",
+              "Instagram",
+              "Twitter",
+              "LinkedIn",
+              "TikTok"
+            ],
+            "leaks_found": 2,
+            "leak_details": [
+              {
+                "platform": "Twitter",
+                "leak_type": "api_abuse",
+                "data_exposed": [
+                  "username",
+                  "tweets",
+                  "followers",
+                  "location_data"
+                ],
+                "date_discovered": "2023-01-10",
+                "severity": "high"
+              },
+              {
+                "platform": "Instagram",
+                "leak_type": "scraped_profiles",
+                "data_exposed": [
+                  "username",
+                  "bio",
+                  "follower_count",
+                  "photos"
+                ],
+                "date_discovered": "2023-03-15",
+                "severity": "medium"
+              }
+            ],
+            "risk_score": 8.0,
+            "recommendations": [
+              "Review privacy settings on all social platforms",
+              "Limit personal information in public profiles",
+              "Regularly audit follower/friend lists",
+              "Consider making accounts private"
+            ]
+          },
+          "public_records": {
+            "check_type": "Public Records",
+            "records_found": 0,
+            "note": "Limited public records expected for minors",
+            "risk_score": 0.0
+          },
+          "data_broker_sites": {
+            "check_type": "Data Broker Sites",
+            "brokers_checked": 15,
+            "listings_found": 0,
+            "broker_details": [],
+            "removable_listings": 0,
+            "risk_score": 0,
+            "recommendations": [
+              "Continue periodic monitoring of data broker sites"
+            ]
+          },
+          "government_databases": {
+            "check_type": "Government Databases",
+            "databases_checked": 8,
+            "exposures_found": 1,
+            "exposure_details": [
+              {
+                "database": "professional_licenses",
+                "data_exposed": [
+                  "name",
+                  "license_number",
+                  "address",
+                  "discipline_records"
+                ],
+                "agency": "state_licensing_board",
+                "privacy_risk": "medium"
+              }
+            ],
+            "risk_score": 3.0,
+            "recommendations": [
+              "Review what information is required to be public",
+              "Request corrections for inaccurate information",
+              "Understand your rights regarding government data",
+              "Consider privacy implications before public filings"
+            ]
+          },
+          "professional_networks": {
+            "check_type": "Professional Networks",
+            "networks_checked": 0,
+            "note": "Professional networks not applicable for age group",
+            "risk_score": 0.0
+          }
+        },
+        "overall_exposure_risk": 3.5,
+        "critical_exposures": [
+          "High risk exposure in Email Breaches",
+          "Critical breach: Adobe",
+          "Critical breach: Yahoo",
+          "High risk exposure in Social Media Leaks",
+          "High severity leak: Twitter"
+        ],
+        "exposed_data_types": [
+          "profile_data",
+          "password_hash",
+          "bio",
+          "email",
+          "tweets",
+          "location_data",
+          "photos",
+          "follower_count",
+          "followers",
+          "security_questions",
+          "phone",
+          "password",
+          "username"
+        ],
+        "recommendations": [
+          "Continue periodic monitoring of data broker sites",
+          "Request corrections for inaccurate information",
+          "Change passwords for affected accounts",
+          "Limit personal information in public profiles",
+          "Review privacy settings on all social platforms",
+          "Regularly audit follower/friend lists",
+          "Review what information is required to be public",
+          "Monitor accounts for suspicious activity",
+          "Consider privacy implications before public filings",
+          "Understand your rights regarding government data",
+          "Consider using unique passwords for each service",
+          "Educate about long-term implications of online activity",
+          "Enable two-factor authentication",
+          "Be cautious about sharing personal information online",
+          "Create alerts for your name and personal information",
+          "Consider making accounts private",
+          "Implement a regular data exposure monitoring routine",
+          "Practice good data hygiene and minimize information sharing",
+          "Monitor child's digital footprint regularly",
+          "Use identity monitoring services",
+          "Use parental controls to limit data exposure",
+          "Review and update privacy settings regularly"
+        ]
+      },
+      "risk_score": 3.9555555555555557,
+      "recommendations": [
+        "Use strong, unique passwords for each platform",
+        "Continue periodic monitoring of data broker sites",
+        "Use privacy-focused search engines like DuckDuckGo",
+        "Focus on digital literacy education",
+        "Regularly audit friend/follower lists",
+        "Educate about privacy risks and safe online practices",
+        "Disable location sharing on tiktok",
+        "Enable safe search for children and teens",
+        "Enable two-factor authentication on facebook",
+        "Ensure all social media accounts are set to private",
+        "Regularly monitor and review privacy settings",
+        "Request corrections for inaccurate information",
+        "Turn off activity status indicators",
+        "Regularly review and update privacy settings",
+        "Disable location sharing on all platforms",
+        "Regularly delete voice recordings and viewing history",
+        "Regularly clear search data",
+        "Enable advanced threat protection",
+        "Use physical mute buttons when privacy is needed",
+        "Change passwords for affected accounts",
+        "Limit personal information in public profiles",
+        "Enable parental controls where available",
+        "Regularly review and revoke unnecessary app permissions",
+        "Review privacy settings on all social platforms",
+        "Regularly audit follower/friend lists",
+        "Review what information is required to be public",
+        "Monitor accounts for suspicious activity",
+        "Consider privacy implications before public filings",
+        "Understand your rights regarding government data",
+        "Consider using unique passwords for each service",
+        "Regularly clear browsing data",
+        "Disable location sharing on twitter",
+        "Minimize data sharing and collection",
+        "Regularly audit and update privacy settings",
+        "Enable two-factor authentication on all accounts",
+        "Implement age-appropriate privacy controls",
+        "Enable advanced security features like Personal Vault",
+        "Review and limit third-party app permissions",
+        "Educate about long-term implications of online activity",
+        "Increase parental monitoring and guidance",
+        "Keep software and firmware updated",
+        "Enable two-factor authentication",
+        "Be cautious about sharing personal information online",
+        "Enable strict parental controls on all devices and services",
+        "Use family-safe search engines and content filters",
+        "Create alerts for your name and personal information",
+        "Consider making accounts private",
+        "Disable unnecessary data collection on smart devices",
+        "Implement a regular data exposure monitoring routine",
+        "Use privacy-focused alternatives where possible",
+        "Practice good data hygiene and minimize information sharing",
+        "Disable ad personalization where possible",
+        "Use zero-knowledge cloud storage for highly sensitive data",
+        "Disable app tracking where possible",
+        "Monitor child's digital footprint regularly",
+        "Use VPN for additional privacy protection",
+        "Review and update privacy settings regularly",
+        "Consider using privacy-focused browsers like Brave or Tor",
+        "Use identity monitoring services",
+        "Use privacy-focused search engines",
+        "Use parental controls to limit data exposure",
+        "Enable strict tracking protection in all browsers",
+        "Use app-specific passwords for sensitive services",
+        "Disable location sharing on facebook",
+        "Keep apps updated for security patches",
+        "Regularly review friend/follower lists",
+        "Regularly review connected apps and permissions",
+        "Use encrypted email services for sensitive communications",
+        "Enable client-side encryption for sensitive files",
+        "Regularly audit shared files and permissions",
+        "Disable location sharing on instagram",
+        "Review privacy settings on youtube",
+        "Think before posting - consider long-term implications",
+        "Disable search history and ad personalization",
+        "Be cautious about sharing personal information"
+      ]
+    }
+  },
+  "family_summary": {
+    "total_members": 2,
+    "age_group_distribution": {
+      "adult": 1,
+      "teen": 1
+    },
+    "risk_score_analysis": {
+      "average": 3.994444444444445,
+      "min": 3.9555555555555557,
+      "max": 4.033333333333334,
+      "median": 3.994444444444445,
+      "high_risk_members": 0,
+      "low_risk_members": 0
+    },
+    "common_vulnerabilities": [
+      "social_media_two-factor_authentication_not_enabled",
+      "social_media_location_data_in_photos",
+      "social_media_workplace_information_visible",
+      "social_media_location_tags_in_posts",
+      "social_media_face_recognition_in_photos",
+      "social_media_personal_information_in_tweets",
+      "social_media_location_mentioned_in_tweets",
+      "social_media_profile_fully_public",
+      "social_media_activity_broadcasts_enabled",
+      "social_media_face_visible_in_videos",
+      "social_media_location_data_in_some_videos",
+      "social_media_potential_for_viral_exposure",
+      "social_media_stories_visible_to_all_friends",
+      "social_media_face_recognition_data_collection",
+      "social_media_public_video_uploads",
+      "social_media_comments_on_various_channels",
+      "social_media_channel_information_publicly_available",
+      "exposure_high_risk_exposure_in_email_breaches",
+      "exposure_critical_breach:_yahoo",
+      "exposure_critical_breach:_adobe",
+      "exposure_high_risk_exposure_in_data_broker_sites",
+      "exposure_high_risk_exposure_in_social_media_leaks",
+      "exposure_high_severity_leak:_twitter"
+    ],
+    "platform_usage_patterns": {
+      "facebook": {
+        "users": 2,
+        "total_risk_score": 13.0,
+        "high_risk_users": 0,
+        "usage_percentage": 100.0,
+        "average_risk_score": 6.5,
+        "high_risk_percentage": 0.0
+      },
+      "instagram": {
+        "users": 2,
+        "total_risk_score": 8.4,
+        "high_risk_users": 0,
+        "usage_percentage": 100.0,
+        "average_risk_score": 4.2,
+        "high_risk_percentage": 0.0
+      },
+      "twitter": {
+        "users": 2,
+        "total_risk_score": 7.6,
+        "high_risk_users": 0,
+        "usage_percentage": 100.0,
+        "average_risk_score": 3.8,
+        "high_risk_percentage": 0.0
+      },
+      "linkedin": {
+        "users": 1,
+        "total_risk_score": 2.5,
+        "high_risk_users": 0,
+        "usage_percentage": 50.0,
+        "average_risk_score": 2.5,
+        "high_risk_percentage": 0.0
+      },
+      "tiktok": {
+        "users": 2,
+        "total_risk_score": 12.7,
+        "high_risk_users": 1,
+        "usage_percentage": 100.0,
+        "average_risk_score": 6.35,
+        "high_risk_percentage": 50.0
+      },
+      "snapchat": {
+        "users": 2,
+        "total_risk_score": 9.6,
+        "high_risk_users": 0,
+        "usage_percentage": 100.0,
+        "average_risk_score": 4.8,
+        "high_risk_percentage": 0.0
+      },
+      "youtube": {
+        "users": 2,
+        "total_risk_score": 7.0,
+        "high_risk_users": 0,
+        "usage_percentage": 100.0,
+        "average_risk_score": 3.5,
+        "high_risk_percentage": 0.0
+      }
+    },
+    "privacy_maturity_levels": {
+      "average_privacy_score": 6.633333333333333,
+      "maturity_distribution": {
+        "basic": 0,
+        "developing": 0,
+        "intermediate": 2,
+        "advanced": 0
+      },
+      "family_privacy_level": "Intermediate"
+    },
+    "family_risk_profile": {
+      "overall_risk": 3.994444444444445,
+      "risk_level": "Low",
+      "high_risk_members": [],
+      "risk_distribution": {
+        "high": 0,
+        "medium": 1,
+        "low": 1
+      }
+    },
+    "improvement_priorities": []
+  },
+  "recommendations": [
+    "Establish family digital safety rules",
+    "Implement parental controls across devices",
+    "Schedule regular digital literacy education",
+    "Create safe communication channels for reporting issues"
+  ]
+}

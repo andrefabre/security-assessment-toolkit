@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Digital Footprint Assessment - Bodgan</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .report-header {
+            text-align: center;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .report-header h1 {
+            color: #007bff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .report-header h2 {
+            color: #555;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        
+        .assessment-date, .member-info {
+            color: #666;
+            font-style: italic;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        section h2 {
+            color: #007bff;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .risk-card {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        .risk-high {
+            border-left-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        
+        .risk-medium {
+            border-left-color: #ffc107;
+            background-color: #fff3cd;
+        }
+        
+        .risk-low {
+            border-left-color: #28a745;
+            background-color: #d4edda;
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .recommendations-list {
+            list-style: none;
+        }
+        
+        .recommendations-list li {
+            background: #e7f3ff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+        
+        .priority-high {
+            border-left-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .platform-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            background: white;
+        }
+        
+        .platform-name {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        
+        .risk-indicator {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .risk-indicator.high { background-color: #dc3545; }
+        .risk-indicator.medium { background-color: #ffc107; color: #000; }
+        .risk-indicator.low { background-color: #28a745; }
+        
+        .report-footer {
+            border-top: 2px solid #e9ecef;
+            padding-top: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #e9ecef;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            color: #495057;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: #007bff;
+            transition: width 0.3s ease;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="report-header">
+            <h1>Family Digital Footprint Assessment</h1>
+            <h2>Bodgan</h2>
+            <p class="assessment-date">Assessment Date: September 27, 2025 at 02:22 PM</p>
+        </header>
+        
+        <section class="executive-summary">
+            <h2>Executive Summary</h2>
+            
+        <div class="risk-card risk-low">
+            <h3>Overall Family Risk Assessment</h3>
+            <p><strong>Risk Level:</strong> Low</p>
+            <p><strong>Risk Score:</strong> 4.0/10.0</p>
+            <p>This assessment analyzed your family's digital footprint across social media platforms, privacy settings, and potential data exposures.</p>
+        </div>
+        
+        </section>
+        
+        <section class="family-overview">
+            <h2>Family Overview</h2>
+            
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-value">2</div>
+                <div class="stat-label">Family Members Assessed</div>
+            </div>
+        
+            <div class="stat-card">
+                <div class="stat-value">1</div>
+                <div class="stat-label">Adult</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-value">1</div>
+                <div class="stat-label">Teen</div>
+            </div>
+            </div>
+        </section>
+        
+        <section class="risk-analysis">
+            <h2>Risk Analysis</h2>
+            
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-value">4.0</div>
+                <div class="stat-label">Average Risk Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">0</div>
+                <div class="stat-label">High Risk Members</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">23</div>
+                <div class="stat-label">Common Vulnerabilities</div>
+            </div>
+        </div>
+        <h3>Common Family Vulnerabilities</h3><ul><li>Social Media Two-Factor Authentication Not Enabled</li><li>Social Media Location Data In Photos</li><li>Social Media Workplace Information Visible</li><li>Social Media Location Tags In Posts</li><li>Social Media Face Recognition In Photos</li><li>Social Media Personal Information In Tweets</li><li>Social Media Location Mentioned In Tweets</li><li>Social Media Profile Fully Public</li><li>Social Media Activity Broadcasts Enabled</li><li>Social Media Face Visible In Videos</li><li>Social Media Location Data In Some Videos</li><li>Social Media Potential For Viral Exposure</li><li>Social Media Stories Visible To All Friends</li><li>Social Media Face Recognition Data Collection</li><li>Social Media Public Video Uploads</li><li>Social Media Comments On Various Channels</li><li>Social Media Channel Information Publicly Available</li><li>Exposure High Risk Exposure In Email Breaches</li><li>Exposure Critical Breach: Yahoo</li><li>Exposure Critical Breach: Adobe</li><li>Exposure High Risk Exposure In Data Broker Sites</li><li>Exposure High Risk Exposure In Social Media Leaks</li><li>Exposure High Severity Leak: Twitter</li></ul>
+        </section>
+        
+        <section class="member-summaries">
+            <h2>Individual Member Summaries</h2>
+            
+            <div class="risk-card risk-medium">
+                <h3>Francis</h3>
+                <p><strong>Age Group:</strong> Adult</p>
+                <p><strong>Risk Score:</strong> 4.0/10.0</p>
+                <p><strong>Primary Concerns:</strong> 
+                Use strong, unique passwords for each platform, Use privacy-focused search engines like DuckDuckGo, Regularly monitor for new listings
+                </p>
+            </div>
+            
+            <div class="risk-card risk-low">
+                <h3>Barry</h3>
+                <p><strong>Age Group:</strong> Teen</p>
+                <p><strong>Risk Score:</strong> 4.0/10.0</p>
+                <p><strong>Primary Concerns:</strong> 
+                Use strong, unique passwords for each platform, Continue periodic monitoring of data broker sites, Use privacy-focused search engines like DuckDuckGo
+                </p>
+            </div>
+            
+        </section>
+        
+        <section class="recommendations">
+            <h2>Family Recommendations</h2>
+            <ul class='recommendations-list'><li class=''>Establish family digital safety rules</li><li class=''>Implement parental controls across devices</li><li class=''>Schedule regular digital literacy education</li><li class=''>Create safe communication channels for reporting issues</li></ul>
+        </section>
+        
+        <footer class="report-footer">
+            <p>Generated by Family Data Footprint Auditor v1.0</p>
+            <p>Report generated on: September 27, 2025 at 02:22 PM</p>
+        </footer>
+    </div>
+</body>
+</html>

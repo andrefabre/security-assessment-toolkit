@@ -1,0 +1,96 @@
+{
+  "assessment": {
+    "timeout_seconds": 30,
+    "max_retries": 3,
+    "enable_social_media_audit": true,
+    "enable_privacy_audit": true,
+    "enable_exposure_audit": true
+  },
+  "social_media": {
+    "platforms": [
+      "facebook",
+      "instagram",
+      "twitter",
+      "linkedin",
+      "tiktok",
+      "snapchat",
+      "youtube"
+    ],
+    "check_privacy_settings": true,
+    "analyze_content": true,
+    "risk_thresholds": {
+      "low": 3.0,
+      "medium": 6.0,
+      "high": 8.0
+    }
+  },
+  "privacy": {
+    "categories": [
+      "web_browsers",
+      "email_services",
+      "cloud_storage",
+      "search_engines",
+      "mobile_apps",
+      "smart_devices"
+    ],
+    "privacy_score_weights": {
+      "web_browsers": 0.2,
+      "email_services": 0.2,
+      "cloud_storage": 0.15,
+      "search_engines": 0.15,
+      "mobile_apps": 0.15,
+      "smart_devices": 0.15
+    }
+  },
+  "data_exposure": {
+    "check_types": [
+      "email_breaches",
+      "social_media_leaks",
+      "public_records",
+      "data_broker_sites",
+      "government_databases",
+      "professional_networks"
+    ],
+    "breach_apis": {
+      "haveibeenpwned": {
+        "enabled": false,
+        "api_key": ""
+      }
+    },
+    "exposure_thresholds": {
+      "low": 2.0,
+      "medium": 5.0,
+      "high": 7.0
+    }
+  },
+  "reporting": {
+    "formats": [
+      "html",
+      "json"
+    ],
+    "include_charts": true,
+    "include_recommendations": true,
+    "output_directory": "./reports"
+  },
+  "age_groups": {
+    "child": {
+      "max_age": 12,
+      "stricter_privacy": true,
+      "parental_controls": true
+    },
+    "teen": {
+      "max_age": 17,
+      "privacy_education": true,
+      "monitored_access": true
+    },
+    "adult": {
+      "full_assessment": true,
+      "professional_considerations": true
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file": "family_auditor.log"
+  }
+}
