@@ -1,0 +1,44 @@
+# Family Data Footprint Auditor - Python Dependencies
+
+# Core requirements
+requests>=2.28.0
+urllib3>=1.26.12
+python-dotenv>=1.0.0
+
+# Web scraping and analysis
+beautifulsoup4>=4.11.1
+selenium>=4.5.0
+lxml>=4.9.1
+
+# Data analysis and visualization
+pandas>=1.5.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+plotly>=5.11.0
+
+# Social media API clients
+tweepy>=4.14.0
+facebook-sdk>=3.1.0
+instaloader>=4.9.0
+
+# Privacy and security analysis
+python-whois>=0.8.0
+dnspython>=2.2.1
+cryptography>=38.0.0
+
+# Report generation
+jinja2>=3.1.0
+markdown>=3.4.0
+weasyprint>=57.0
+
+# Testing and development
+pytest>=7.2.0
+pytest-cov>=4.0.0
+black>=22.10.0
+flake8>=5.0.0
+
+# Configuration and utilities
+pyyaml>=6.0
+click>=8.1.0
+rich>=12.6.0
+tqdm>=4.64.0
