@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andre Fabre - Cybersecurity Assessment Services</title>
+    <meta name="description" content="Professional cybersecurity assessments for individuals, families, and businesses. Comprehensive digital security audits and risk analysis.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 15px 30px;
+            border: 2px solid white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn:hover {
+            background: white;
+            color: #667eea;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+        
+        .btn-primary:hover {
+            background: rgba(255,255,255,0.9);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .service-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+            margin: 1rem 0;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: #667eea;
+            margin-top: 0.5rem;
+        }
+        
+        /* Trust Signals */
+        .trust-signals {
+            padding: 100px 0;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        
+        .certifications {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .cert-badge {
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-weight: 600;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .social-links a {
+            font-size: 1.5rem;
+            color: #ccc;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #667eea;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Andre Fabre Cybersecurity</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/assessment" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Try Assessment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Secure Your Digital Future</h1>
+            <p>Professional cybersecurity assessments for individuals, families, and businesses</p>
+            <div class="cta-buttons">
+                <a href="/assessment" class="btn btn-primary">Start Free Assessment</a>
+                <a href="#services" class="btn">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Cybersecurity Assessment Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Individual & Family</h3>
+                    <div class="service-price">$199</div>
+                    <p>Comprehensive digital footprint analysis for personal and family security</p>
+                    <ul style="text-align: left; margin: 1rem 0;">
+                        <li>Social media privacy audit</li>
+                        <li>Data exposure analysis</li>
+                        <li>Personal security recommendations</li>
+                        <li>Family-safe practices guide</li>
+                    </ul>
+                    <a href="/assessment" class="btn" style="color: #667eea; border-color: #667eea;">Get Started</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Small Business</h3>
+                    <div class="service-price">$799</div>
+                    <p>Complete security assessment for small to medium businesses</p>
+                    <ul style="text-align: left; margin: 1rem 0;">
+                        <li>Network security analysis</li>
+                        <li>Employee security practices</li>
+                        <li>Compliance assessment</li>
+                        <li>Risk remediation plan</li>
+                        <li>1-hour consultation call</li>
+                    </ul>
+                    <a href="#contact" class="btn" style="color: #667eea; border-color: #667eea;">Contact Us</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Enterprise</h3>
+                    <div class="service-price">$2,999+</div>
+                    <p>Comprehensive security audit for large organizations</p>
+                    <ul style="text-align: left; margin: 1rem 0;">
+                        <li>Full infrastructure assessment</li>
+                        <li>Compliance audit (SOC 2, ISO 27001)</li>
+                        <li>Custom remediation roadmap</li>
+                        <li>Quarterly security reviews</li>
+                        <li>On-site consulting options</li>
+                    </ul>
+                    <a href="#contact" class="btn" style="color: #667eea; border-color: #667eea;">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Assessments?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div>
+                        <h3>Comprehensive Analysis</h3>
+                        <p>We analyze your complete digital footprint across social media, privacy settings, and data exposure risks.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h3>Risk Scoring</h3>
+                        <p>Get clear, quantified risk scores that help prioritize security improvements.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div>
+                        <h3>Actionable Recommendations</h3>
+                        <p>Receive detailed, step-by-step guidance to improve your security posture.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Professional Reports</h3>
+                        <p>Get detailed HTML and PDF reports suitable for compliance and documentation.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                        <h3>Fast Turnaround</h3>
+                        <p>Most assessments completed within 24-48 hours of data collection.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Secure & Confidential</h3>
+                        <p>All data is encrypted and handled according to strict privacy standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-signals">
+        <div class="container">
+            <h2 class="section-title">Trusted Expertise</h2>
+            <p>Professional cybersecurity assessments backed by industry certifications and experience</p>
+            <div class="certifications">
+                <div class="cert-badge">Security+ Certified</div>
+                <div class="cert-badge">CISSP Candidate</div>
+                <div class="cert-badge">ISO 27001 Trained</div>
+                <div class="cert-badge">GDPR Compliant</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Secure Your Digital Life?</h2>
+            <p>Start with a free assessment to understand your current security posture</p>
+            <a href="/assessment" class="btn btn-primary" style="margin-top: 2rem;">Start Free Assessment</a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>Email: andre@cybersecurityassessments.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Response time: Within 24 hours</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="#services">Individual Assessment</a></p>
+                    <p><a href="#services">Business Assessment</a></p>
+                    <p><a href="#services">Enterprise Audit</a></p>
+                    <p><a href="/assessment">Free Assessment Tool</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <p><a href="/blog">Security Blog</a></p>
+                    <p><a href="/resources">Free Resources</a></p>
+                    <p><a href="/case-studies">Case Studies</a></p>
+                    <p><a href="/privacy-policy">Privacy Policy</a></p>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://linkedin.com/in/andrefabre"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/andrefabre"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/andrefabre"><i class="fab fa-github"></i></a>
+            </div>
+            
+            <p style="margin-top: 2rem; opacity: 0.7;">
+                &copy; 2025 Andre Fabre Cybersecurity. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
